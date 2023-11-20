@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+    
+        h1 {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    
+        h2 {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    
+        select {
+            height: 40px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Pendaftaran Mahasiswa Baru</h1>
+    <form action="proses_pendaftaran.php" method="post">
+        <h2>Data Pribadi</h2>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" name="nama" id="nama" required><br><br>
+
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki
+        <input type="radio" name="jenis_kelamin" value="Perempuan" required> Perempuan<br><br>
+
+        <label for="asal_sekolah">Asal Sekolah:</label>
+        <input type="text" name="asal_sekolah" id="asal_sekolah" required><br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" name="tanggal_lahir" id="tanggal_lahir" required><br><br>
+
+        <label for="tempat_lahir">Tempat Lahir:</label>
+        <input type="text" name="tempat_lahir" id="tempat_lahir" required><br><br>
+
+        <label for="nomor_akta_lahir">Nomor Akta Lahir:</label>
+        <input type="text" name="nomor_akta_lahir" id="nomor_akta_lahir" required><br><br>
+
+        <label for="nik">NIK:</label>
+        <input type="text" name="nik" id="nik" required><br><br>
+
+        <label for="agama">Agama:</label>
+        <input type="text" name="agama" id="agama" required><br><br>
+
+        <label for="anak_ke">Anak ke:</label>
+        <input type="text" name="anak_ke" id="anak_ke" required><br><br>
+
+        <label for="dari">Dari:</label>
+        <input type="text" name="dari" id="dari" required><br><br>
+
+        <label for="status_anak">Status Anak:</label>
+        <input type="text" name="status_anak" id="status_anak" required><br><br>
+
+        <label for="kewarganegaraan">Kewarganegaraan:</label>
+        <input type="text" name="kewarganegaraan" id="kewarganegaraan" required><br><br>
+
+        <label for="berkebutuhan_khusus">Anak Berkebutuhan Khusus:</label>
+        <select name="berkebutuhan_khusus" id="berkebutuhan_khusus">
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+        </select><br><br>
+
+        <h2>Keadaan Jasmani</h2>
+        <label for="penyakit">Penyakit yang Pernah Diderita:</label>
+        <input type="text" name="penyakit" id="penyakit"><br><br>
+
+        <label for="berat_badan">Berat Badan:</label>
+        <input type="text" name="berat_badan" id="berat_badan"><br><br>
+
+        <label for="tinggi_badan">Tinggi Badan:</label>
+        <input type="text" name="tinggi_badan" id="tinggi_badan"><br><br>
+
+        <label for="golongan_darah">Golongan Darah:</label>
+        <input type="text" name="golongan_darah" id="golongan_darah"><br><br>
+
+        <h2>Alamat</h2>
+        <label for="alamat_sesuai_kk">Alamat Sesuai KK:</label>
+        <textarea name="alamat_sesuai_kk" id="alamat_sesuai_kk" required></textarea><br><br>
+
+        <label for="alamat_tempat_tinggal">Alamat Tempat Tinggal Sekarang:</label>
+        <textarea name="alamat_tempat_tinggal" id="alamat_tempat_tinggal" required></textarea><br><br>
+
+        <label for="tinggal_bersama">Tinggal Bersama:</label>
+        <input type="text" name="tinggal_bersama" id="tinggal_bersama" required><br><br>
+
+        <label for="jenis_tinggal">Jenis Tinggal:</label>
+        <input type="text" name="jenis_tinggal" id="jenis_tinggal" required><br><br>
+
+        <label for="penerima_bantuan">Penerima Bantuan:</label>
+        <select name="penerima_bantuan" id="penerima_bantuan">
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+        </select><br><br>
+
+        <label for="jenis_bantuan">Jenis Bantuan:</label><br>
+        <input type="checkbox" id="bsm" name="jenis_bantuan[]" value="BSM">BSM<br>
+        <input type="checkbox" id="bidik_misi" name="jenis_bantuan[]" value="Bidik Misi">Bidik Misi<br>
+        <input type="checkbox" id="pip" name="jenis_bantuan[]" value="PIP">PIP<br>
+        <input type="checkbox" id="kks" name="jenis_bantuan[]" value="KKS">KKS<br>
+        <input type="checkbox" id="pkh" name="jenis_bantuan[]" value="PKH">PKH<br>
+        <input type="text" id="jenis_bantuan_other" name="jenis_bantuan_other" placeholder="Lainnya"><br>
+
+        <label for="no_tanda_bantuan">No. Tanda Bantuan:</label>
+        <input type="text" name="no_tanda_bantuan" id="no_tanda_bantuan"><br><br>
+
+        <h2>Data Ayah</h2>
+        <label for="nama_ayah">Nama Ayah:</label>
+        <input type="text" name="nama_ayah" id="nama_ayah" required><br><br>
+
+        <label for="nik_ayah">NIK Ayah:</label>
+        <input type="text" name="nik_ayah" id="nik_ayah" required><br><br>
+
+        <label for="tanggal_lahir_ayah">Tanggal Lahir Ayah:</label>
+        <input type="date" name="tanggal_lahir_ayah" id="tanggal_lahir_ayah" required><br><br>
+
+        <label for="pendidikan_terakhir_ayah">Pendidikan Terakhir Ayah:</label>
+        <input type="text" name="pendidikan_terakhir_ayah" id="pendidikan_terakhir_ayah" required><br><br>
+
+        <label for="no_telepon_ayah">No. Telepon Ayah:</label>
+        <input type="text" name="no_telepon_ayah" id="no_telepon_ayah" required><br><br>
+
+        <label for="pekerjaan_ayah">Pekerjaan Ayah:</label><br>
+        <input type="checkbox" id="PNS/TNI/Polri" name="pekerjaan_ayah[]" value="PNS/TNI/Polri">PNS/TNI/Polri<br>
+        <input type="checkbox" id="Pegawai_Swasta" name="pekerjaan_ayah[]" value="Pegawai Swasta">Pegawai Swasta<br>
+        <input type="checkbox" id="Wiraswasta" name="pekerjaan_ayah[]" value="Wiraswasta">Wiraswasta<br>
+        <input type="checkbox" id="Petani" name="pekerjaan_ayah[]" value="Petani">Petani<br>
+        <input type="checkbox" id="Pensiunan" name="pekerjaan_ayah[]" value="Pensiunan">Pensiunan<br>
+        <input type="text" id="pekerjaan_ayah_other" name="pekerjaan_ayah_other" placeholder="Lainnya"><br>
+
+        <label for="penghasilan_ayah">Penghasilan Ayah:</label>
+        <select name="penghasilan_ayah" id="penghasilan_ayah">
+            <option value="Kurang dari 1 Juta">Kurang dari 1 Juta</option>
+            <option value="1 Juta - 2 Juta">1 Juta - 2 Juta</option>
+            <option value="2 Juta - 5 Juta">2 Juta - 5 Juta</option>
+            <option value="Lebih dari 5 Juta">Lebih dari 5 Juta</option>
+        </select><br><br>
+
+        <h2>Data Ibu</h2>
+        <label for="nama_ibu">Nama Ibu:</label>
+        <input type="text" name="nama_ibu" id="nama_ibu" required><br><br>
+
+        <label for="nik_ibu">NIK Ibu:</label>
+        <input type="text" name="nik_ibu" id="nik_ibu" required><br><br>
+
+        <label for="tanggal_lahir_ibu">Tanggal Lahir Ibu:</label>
+        <input type="date" name="tanggal_lahir_ibu" id="tanggal_lahir_ibu" required><br><br>
+
+        <label for="pendidikan_terakhir_ibu">Pendidikan Terakhir Ibu:</label>
+        <input type="text" name="pendidikan_terakhir_ibu" id="pendidikan_terakhir_ibu" required><br><br>
+
+        <label for="no_telepon_ibu">No. Telepon Ibu:</label>
+        <input type="text" name="no_telepon_ibu" id="no_telepon_ibu" required><br><br>
+
+        <label for="pekerjaan_ibu">Pekerjaan Ibu:</label><br>
+        <input type="checkbox" id="PNS/TNI/Polri" name="pekerjaan_ibu[]" value="PNS/TNI/Polri">PNS/TNI/Polri<br>
+        <input type="checkbox" id="Pegawai_Swasta" name="pekerjaan_ibu[]" value="Pegawai Swasta">Pegawai Swasta<br>
+        <input type="checkbox" id="Wiraswasta" name="pekerjaan_ibu[]" value="Wiraswasta">Wiraswasta<br>
+        <input type="checkbox" id="Petani" name="pekerjaan_ibu[]" value="Petani">Petani<br>
+        <input type="checkbox" id="Pensiunan" name="pekerjaan_ibu[]" value="Pensiunan">Pensiunan<br>
+        <input type="text" id="pekerjaan_ibu_other" name="pekerjaan_ibu_other" placeholder="Lainnya"><br>
+
+        <label for="penghasilan_ibu">Penghasilan Ibu:</label>
+        <select name="penghasilan_ibu" id="penghasilan_ibu">
+            <option value="Kurang dari 1 Juta">Kurang dari 1 Juta</option>
+            <option value="1 Juta - 2 Juta">1 Juta - 2 Juta</option>
+            <option value="2 Juta - 5 Juta">2 Juta - 5 Juta</option>
+            <option value="Lebih dari 5 Juta">Lebih dari 5 Juta</option>
+        </select><br><br>
+
+        <input type="submit" value="Daftar">
+    </form>
+</body>
+</html>
